@@ -177,7 +177,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,//社会化登录
-
+        Mpociot\ApiDoc\ApiDocGeneratorServiceProvider::class,//api文档自动化生成
+        Laravel\Passport\PassportServiceProvider::class,//api认证系统
     ],
 
     /*
