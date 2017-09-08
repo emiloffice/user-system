@@ -13,14 +13,24 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+/*Route::middleware('client.credentials')->get('/user', function (Request $request) {
     return $request->user();
-});
+});*/
 
+Route::get('/user', function(Request $request) {
+    return $request->user();
+})->middleware('auth:api');
 
 Route::group([
     'prefix'=>'/v1',
-    'middleware' => ['api']
+    'middleware' => ['client','auth:api']
 ], function () {
-    Route::post('/user/login','Api\LoginController@login');
+    Route::get('/user/info',function (Request $request){
+        return $request->user();
+    });
+    Route::post('/user/info',function (Request $request){
+        return $request->user();
+    });
+//    Route::get('/user-info','Api\UserController@info');
+    Route::get('/user-info','Api\UserController@info');
 });

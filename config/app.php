@@ -179,6 +179,7 @@ return [
         Laravel\Socialite\SocialiteServiceProvider::class,//社会化登录
         Mpociot\ApiDoc\ApiDocGeneratorServiceProvider::class,//api文档自动化生成
         Laravel\Passport\PassportServiceProvider::class,//api认证系统
+        Mews\Captcha\CaptchaServiceProvider::class,//验证码类
     ],
 
     /*
@@ -228,7 +229,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,//社会化登录
-        'Uuid' => Webpatser\Uuid\Uuid::class,
+        'Uuid' => Webpatser\Uuid\Uuid::class,//uuid
+        'Captcha' => Mews\Captcha\Facades\Captcha::class,//验证码类
     ],
 
 ];

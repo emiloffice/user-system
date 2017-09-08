@@ -18,4 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/test', 'TestController@index')->name('home');
+Route::get('/test', 'TestController@index')->name('test');
+Route::get('/test/info', 'TestController@info')->name('info');
+
+Route::any('captcha-test', 'TestController@captcha');

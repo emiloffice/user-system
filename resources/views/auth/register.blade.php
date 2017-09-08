@@ -60,7 +60,26 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
+                        {{--验证码类--}}
 
+                        <div class="form-group">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-6">
+                                {!! captcha_img() !!}
+
+                            </div>
+                        </div>
+                        <div class="form-group{{ $errors->has('captcha') ? ' has-error' : '' }}">
+                            <label for="password-confirm" class="col-md-4 control-label">Captcha</label>
+                            <div class="col-md-6">
+                                <input type="text" name="captcha" class="form-control" required>
+                                @if ($errors->has('captcha'))
+                                    <span class="help-block">
+                                            <strong>{{ $errors->first('captcha') }}</strong>
+                                        </span>
+                                @endif
+                            </div>
+                        </div>
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
