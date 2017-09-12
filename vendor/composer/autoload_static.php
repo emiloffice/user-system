@@ -473,7 +473,6 @@ class ComposerStaticInitfc3a1f404938efe07fda4c1b2146b5b1
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Events\\Event' => __DIR__ . '/../..' . '/app/Events/Event.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
-        'App\\Feedback' => __DIR__ . '/../..' . '/app/Feedback.php',
         'App\\Http\\Controllers\\ApiController' => __DIR__ . '/../..' . '/app/Http/Controllers/ApiController.php',
         'App\\Http\\Controllers\\Api\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/LoginController.php',
         'App\\Http\\Controllers\\Api\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/UserController.php',
