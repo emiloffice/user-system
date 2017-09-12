@@ -33,4 +33,6 @@ Route::group([
     });
 //    Route::get('/user-info','Api\UserController@info');
     Route::get('/user-info','Api\UserController@info');
+    Route::post('/user/feedback','Api\UserController@feedback');
+    Route::get('/user/feedback','Api\UserController@feedback');
 });

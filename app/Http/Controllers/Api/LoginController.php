@@ -33,6 +33,6 @@ class LoginController extends ApiController
         }
 
 //        return $this->failure('login failed',401);
-        return json_encode(['errors'=>'login failed','code'=>401]);
+        return response()->json(['login failed'=>401]);
     }
 }
