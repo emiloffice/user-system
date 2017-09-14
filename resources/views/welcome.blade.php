@@ -78,7 +78,7 @@
             @endif
 
             <div class="content">
-
+                <div class="title">{{getenv('APP_NAME')}}</div>
             </div>
         </div>
     </body>
