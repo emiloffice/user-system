@@ -36,3 +36,8 @@ Route::group([
     Route::post('/user/feedback','Api\UserController@feedback');
     Route::get('/user/feedback','Api\UserController@feedback');
 });
+Route::group([
+    'prefix'=>'/v1'
+], function (){
+    Route::any('game-update-at', 'Api\GameController@update_at');
+});

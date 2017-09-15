@@ -22,3 +22,4 @@ Route::get('/test', 'TestController@index')->name('test');
 Route::get('/test/info', 'TestController@info')->name('info');
 
 Route::any('captcha-test', 'TestController@captcha');
+Route::any('game-project-create', 'GameController@updateCreate');
