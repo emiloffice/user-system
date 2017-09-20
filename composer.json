@@ -15,7 +15,8 @@
         "laravel/tinker": "~1.0",
         "mews/captcha": "^2.1",
         "mpociot/laravel-apidoc-generator": "^2.0",
-        "webpatser/laravel-uuid": "2.*"
+        "webpatser/laravel-uuid": "2.*",
+        "guzzlehttp/guzzle": "6.*"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

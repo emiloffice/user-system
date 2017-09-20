@@ -5,6 +5,8 @@ namespace App\Http\Controllers\OAuth;
 use Facebook\Exceptions\FacebookResponseException;
 use Facebook\Exceptions\FacebookSDKException;
 use Facebook\Facebook;
+use GuzzleHttp\Exception\GuzzleException;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Laravel\Socialite\Facades\Socialite;
@@ -52,8 +54,17 @@ class FbController extends Controller
     public function handleProviderCallback(Request $request)
     {
         $user = Socialite::driver('facebook')->user();
+        $client = new Client(); //GuzzleHttp\Client
+        $result = $client->get('https://graph.facebook.com/oauth/client_code?', [
+            'form_params' => [
+                'access_token' => $user->token,
+                'client_id' => env('FACEBOOK_APP_ID'),
+                'client_secret'=> env('FACEBOOK_APP_SECRET'),
+                'redirect_uri'=>'http://user.multiverseinc.com/OAuth/fb-callback'
+            ]
+        ]);
+        $user->result = $result;
         dd($user);
-
     }
     public function callback(Facebook $fb)
     {
