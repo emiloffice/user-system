@@ -180,6 +180,7 @@ return [
         Mpociot\ApiDoc\ApiDocGeneratorServiceProvider::class,//api文档自动化生成
         Laravel\Passport\PassportServiceProvider::class,//api认证系统
         Mews\Captcha\CaptchaServiceProvider::class,//验证码类
+        App\Providers\FacebookServiceProvider::class,//FaceBook
     ],
 
     /*

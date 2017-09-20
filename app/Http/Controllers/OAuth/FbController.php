@@ -10,27 +10,45 @@ use App\Http\Controllers\Controller;
 
 class FbController extends Controller
 {
-    private $app_id = '280507985774061';
-    private $app_secret = 'aebfc7f776522b5334b283a09a254487';
-    public function __construct()
+    /*public function login(Facebook $fb)
     {
-        $this->fb = new Facebook([
-            'app_id' => $this->app_id,
-            'app_secret' => $this->app_secret,
-            'default_graph_version' => '2.2'
-        ]);
-    }
-    public function login()
+        $helper = $fb->getCanvasHelper();
+
+        try {
+            $accessToken = $helper->getAccessToken();
+        } catch(FacebookResponseException $e) {
+            // When Graph returns an error
+            echo 'Graph returned an error: ' . $e->getMessage();
+            exit;
+        } catch(FacebookSDKException $e) {
+            // When validation fails or other local issues
+            echo 'Facebook SDK returned an error: ' . $e->getMessage();
+            exit;
+        }
+
+        if (! isset($accessToken)) {
+            echo 'No OAuth data could be obtained from the signed request. User has not authorized your app yet.';
+            exit;
+        }
+
+// Logged in
+        echo '<h3>Signed Request</h3>';
+        var_dump($helper->getSignedRequest());
+
+        echo '<h3>Access Token</h3>';
+        var_dump($accessToken->getValue());
+    }*/
+    public function login(Facebook $fb)
     {
-        $helper = $this->fb->getRedirectLoginHelper();
+        $helper = $fb->getRedirectLoginHelper();
         $permissions = ['email']; // Optional permissions
-        $loginUrl = $helper->getLoginUrl(getenv('APP_URL').'/fb-callback.php', $permissions);
+        $loginUrl = $helper->getLoginUrl('http://user.multiverseinc.com/fb-callback.php', $permissions);
         echo '<a href="' . htmlspecialchars($loginUrl) . '">Log in with Facebook!</a>';
     }
 
-    public function callback()
+    public function callback(Facebook $fb)
     {
-        $helper = $this->fb->getRedirectLoginHelper();
+        $helper = $fb->getRedirectLoginHelper();
         try {
             $accessToken = $helper->getAccessToken();
         } catch(FacebookResponseException $e) {
@@ -60,7 +78,7 @@ class FbController extends Controller
         var_dump($accessToken->getValue());
 
         // The OAuth 2.0 client handler helps us manage access tokens
-        $oAuth2Client = $this->fb->getOAuth2Client();
+        $oAuth2Client = $fb->getOAuth2Client();
 
         // Get the access token metadata from /debug_token
         $tokenMetadata = $oAuth2Client->debugToken($accessToken);
@@ -71,7 +89,7 @@ class FbController extends Controller
                 $tokenMetadata->validateAppId(''); // Replace {app-id} with your app id
         // If you know the user ID this access token belongs to, you can validate it here
         //$tokenMetadata->validateUserId('123');
-        $tokenMetadata->validateExpiration($this->app_id);
+        $tokenMetadata->validateExpiration('280507985774061');
 
         if (! $accessToken->isLongLived()) {
             // Exchanges a short-lived access token for a long-lived one
