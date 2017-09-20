@@ -29,7 +29,7 @@ class TwitterController extends Controller
         }else{
             $user = Socialite::driver('twitter')->user();
             session(['OAUTH_INFO'=>$user]);
-            print_r($user);
+            dd($user);
 //            return redirect('oauth-confirm-email');
         }
     }
