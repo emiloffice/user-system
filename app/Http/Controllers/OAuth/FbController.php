@@ -51,7 +51,7 @@ class FbController extends Controller
     }
     public function handleProviderCallback(Request $request)
     {
-        $user = Socialite::driver('twitter')->user();
+        $user = Socialite::driver('facebook')->user();
         dd($user);
 
     }
