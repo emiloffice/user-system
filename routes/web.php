@@ -23,3 +23,10 @@ Route::get('/test/info', 'TestController@info')->name('info');
 
 Route::any('captcha-test', 'TestController@captcha');
 Route::any('game-project-create', 'GameController@updateCreate');
+Route::group([
+    'prefix'=>'/OAuth',
+    'middleware' => ['']
+], function () {
+    Route::get('/fb-login','OAuth\FbController@login');
+    Route::get('/fb-callback','OAuth\FbController@callback');
+});
