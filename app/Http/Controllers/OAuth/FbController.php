@@ -45,7 +45,16 @@ class FbController extends Controller
         $loginUrl = $helper->getLoginUrl('http://user.multiverseinc.com/fb-callback.php', $permissions);
         echo '<a href="' . htmlspecialchars($loginUrl) . '">Log in with Facebook!</a>';
     }
+    public function redirectToProvider()
+    {
+        return Socialite::driver('facebook')->redirect();
+    }
+    public function handleProviderCallback(Request $request)
+    {
+        $user = Socialite::driver('twitter')->user();
+        dd($user);
 
+    }
     public function callback(Facebook $fb)
     {
         $helper = $fb->getRedirectLoginHelper();

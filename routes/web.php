@@ -26,8 +26,10 @@ Route::any('game-project-create', 'GameController@updateCreate');
 Route::group([
     'prefix'=>'/OAuth',
 ], function () {
-    Route::get('/fb-login','OAuth\FbController@login');
-    Route::get('/fb-callback','OAuth\FbController@callback');
+    /*Route::get('/fb-login','OAuth\FbController@login');
+    Route::get('/fb-callback','OAuth\FbController@callback');*/
     Route::get('/twitter-login','OAuth\TwitterController@redirectToProvider');
     Route::get('/twitter-callback','OAuth\TwitterController@handleProviderCallback');
+    Route::get('/fb-login','OAuth\FbController@redirectToProvider');
+    Route::get('/fb-callback','OAuth\FbController@handleProviderCallback');
 });
