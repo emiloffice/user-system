@@ -36,6 +36,11 @@ return [
     ],
     'facebook' => [
 
+    ],
+    'twitter' => [
+        'client_id' => env('TWITTER_APP_ID'),
+        'client_secret' => env('TWITTER_APP_SECRET'),
+        'redirect' => env('TWITTER_REDIRECT'),
     ]
 
 ];
