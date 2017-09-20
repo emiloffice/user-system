@@ -7,7 +7,7 @@ use Facebook\Exceptions\FacebookSDKException;
 use Facebook\Facebook;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use Laravel\Socialite\Facades\Socialite;
 class FbController extends Controller
 {
     /*public function login(Facebook $fb)
