@@ -60,11 +60,16 @@ class FbController extends Controller
                 'access_token' => $user->token,
                 'client_id' => env('FACEBOOK_APP_ID'),
                 'client_secret'=> env('FACEBOOK_APP_SECRET'),
-                'redirect_uri'=>'http://user.multiverseinc.com/OAuth/fb-callback'
+                'redirect_uri'=>'http://user.multiverseinc.com/OAuth/fb-get-token'
             ]
         ]);
         $user->result = $result;
         dd($user);
+    }
+
+    public function getAccessToken(Request $request)
+    {
+        dd($request);
     }
     public function callback(Facebook $fb)
     {

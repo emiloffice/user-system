@@ -32,4 +32,5 @@ Route::group([
     Route::get('/twitter-callback','OAuth\TwitterController@handleProviderCallback');
     Route::get('/fb-login','OAuth\FbController@redirectToProvider');
     Route::get('/fb-callback','OAuth\FbController@handleProviderCallback');
+    Route::get('/fb-get-token','OAuth\FbController@getAccessToken');
 });
