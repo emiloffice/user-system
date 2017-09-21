@@ -36,3 +36,22 @@ $input-color-placeholder: lighten($text-color, 30%);
 
 // Panels
 $panel-default-heading-bg: #fff;
+
+
+// customize
+$theme-bg-black: #000000;
+$input-border: 1px solid #00ffff;
+$border-style: 1px solid #00ffff;
+
+$special-text: #ff00d8;
+
+html {font-size: 100px}
+body {font-size: 0.14rem;}
+
+p{
+  font-size:14px;
+  font-size:0.14rem;
+}
+.special-text {
+  color: $special-text;
+}

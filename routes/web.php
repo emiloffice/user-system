@@ -34,3 +34,9 @@ Route::group([
     Route::get('/fb-callback','OAuth\FbController@handleProviderCallback');
     Route::get('/fb-get-token','OAuth\FbController@getAccessToken');
 });
+Route::group([
+    'prefix'=>'',
+    'namespace'=>'Home'
+], function ($router) {
+    $router::get('/ambassador','AmbassadorController@index');
+});

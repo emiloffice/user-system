@@ -1,5 +1,22 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@charset "UTF-8";
 
+html {
+  font-size: 100px;
+}
+
+body {
+  font-size: 0.14rem;
+}
+
+p {
+  font-size: 14px;
+  font-size: 0.14rem;
+}
+
+.special-text {
+  color: #ff00d8;
+}
+
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -3354,7 +3371,7 @@ output {
   color: #555555;
   background-color: #fff;
   background-image: none;
-  border: 1px solid #ccd0d2;
+  border: 1px solid 1px solid #00ffff;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -4972,7 +4989,7 @@ tbody.collapse.in {
   color: #555555;
   text-align: center;
   background-color: #eeeeee;
-  border: 1px solid #ccd0d2;
+  border: 1px solid 1px solid #00ffff;
   border-radius: 4px;
 }
 

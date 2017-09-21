@@ -1173,7 +1173,10 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(12);
-module.exports = __webpack_require__(58);
+__webpack_require__(58);
+__webpack_require__(59);
+__webpack_require__(60);
+module.exports = __webpack_require__(61);
 
 
 /***/ }),
@@ -43948,6 +43951,24 @@ if (false) {
 
 /***/ }),
 /* 58 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 59 */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed: ModuleNotFoundError: Module not found: Error: Can't resolve './img/facebook-panel-bg.png' in '/Users/emil/code/user-system/resources/assets/sass'\n    at factoryCallback (/Users/emil/code/user-system/node_modules/webpack/lib/Compilation.js:269:40)\n    at factory (/Users/emil/code/user-system/node_modules/webpack/lib/NormalModuleFactory.js:235:20)\n    at resolver (/Users/emil/code/user-system/node_modules/webpack/lib/NormalModuleFactory.js:60:20)\n    at asyncLib.parallel.e (/Users/emil/code/user-system/node_modules/webpack/lib/NormalModuleFactory.js:127:20)\n    at /Users/emil/code/user-system/node_modules/async/dist/async.js:3861:9\n    at /Users/emil/code/user-system/node_modules/async/dist/async.js:421:16\n    at iteratorCallback (/Users/emil/code/user-system/node_modules/async/dist/async.js:996:13)\n    at /Users/emil/code/user-system/node_modules/async/dist/async.js:906:16\n    at /Users/emil/code/user-system/node_modules/async/dist/async.js:3858:13\n    at resolvers.normal.resolve (/Users/emil/code/user-system/node_modules/webpack/lib/NormalModuleFactory.js:119:22)\n    at onError (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/Resolver.js:65:10)\n    at loggingCallbackWrapper (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/createInnerCallback.js:31:19)\n    at runAfter (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/Resolver.js:158:4)\n    at innerCallback (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/Resolver.js:146:3)\n    at loggingCallbackWrapper (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/createInnerCallback.js:31:19)\n    at next (/Users/emil/code/user-system/node_modules/tapable/lib/Tapable.js:252:11)\n    at /Users/emil/code/user-system/node_modules/enhanced-resolve/lib/UnsafeCachePlugin.js:40:4\n    at loggingCallbackWrapper (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/createInnerCallback.js:31:19)\n    at runAfter (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/Resolver.js:158:4)\n    at innerCallback (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/Resolver.js:146:3)\n    at loggingCallbackWrapper (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/createInnerCallback.js:31:19)\n    at next (/Users/emil/code/user-system/node_modules/tapable/lib/Tapable.js:252:11)\n    at innerCallback (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/Resolver.js:144:11)\n    at loggingCallbackWrapper (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/createInnerCallback.js:31:19)\n    at next (/Users/emil/code/user-system/node_modules/tapable/lib/Tapable.js:249:35)\n    at resolver.doResolve.createInnerCallback (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:44:6)\n    at loggingCallbackWrapper (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/createInnerCallback.js:31:19)\n    at afterInnerCallback (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/Resolver.js:168:10)\n    at loggingCallbackWrapper (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/createInnerCallback.js:31:19)\n    at next (/Users/emil/code/user-system/node_modules/tapable/lib/Tapable.js:252:11)");
+
+/***/ }),
+/* 60 */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed: ModuleNotFoundError: Module not found: Error: Can't resolve './img/login-bg.png' in '/Users/emil/code/user-system/resources/assets/sass'\n    at factoryCallback (/Users/emil/code/user-system/node_modules/webpack/lib/Compilation.js:269:40)\n    at factory (/Users/emil/code/user-system/node_modules/webpack/lib/NormalModuleFactory.js:235:20)\n    at resolver (/Users/emil/code/user-system/node_modules/webpack/lib/NormalModuleFactory.js:60:20)\n    at asyncLib.parallel.e (/Users/emil/code/user-system/node_modules/webpack/lib/NormalModuleFactory.js:127:20)\n    at /Users/emil/code/user-system/node_modules/async/dist/async.js:3861:9\n    at /Users/emil/code/user-system/node_modules/async/dist/async.js:421:16\n    at iteratorCallback (/Users/emil/code/user-system/node_modules/async/dist/async.js:996:13)\n    at /Users/emil/code/user-system/node_modules/async/dist/async.js:906:16\n    at /Users/emil/code/user-system/node_modules/async/dist/async.js:3858:13\n    at resolvers.normal.resolve (/Users/emil/code/user-system/node_modules/webpack/lib/NormalModuleFactory.js:119:22)\n    at onError (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/Resolver.js:65:10)\n    at loggingCallbackWrapper (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/createInnerCallback.js:31:19)\n    at runAfter (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/Resolver.js:158:4)\n    at innerCallback (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/Resolver.js:146:3)\n    at loggingCallbackWrapper (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/createInnerCallback.js:31:19)\n    at next (/Users/emil/code/user-system/node_modules/tapable/lib/Tapable.js:252:11)\n    at /Users/emil/code/user-system/node_modules/enhanced-resolve/lib/UnsafeCachePlugin.js:40:4\n    at loggingCallbackWrapper (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/createInnerCallback.js:31:19)\n    at runAfter (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/Resolver.js:158:4)\n    at innerCallback (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/Resolver.js:146:3)\n    at loggingCallbackWrapper (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/createInnerCallback.js:31:19)\n    at next (/Users/emil/code/user-system/node_modules/tapable/lib/Tapable.js:252:11)\n    at innerCallback (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/Resolver.js:144:11)\n    at loggingCallbackWrapper (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/createInnerCallback.js:31:19)\n    at next (/Users/emil/code/user-system/node_modules/tapable/lib/Tapable.js:249:35)\n    at resolver.doResolve.createInnerCallback (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:44:6)\n    at loggingCallbackWrapper (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/createInnerCallback.js:31:19)\n    at afterInnerCallback (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/Resolver.js:168:10)\n    at loggingCallbackWrapper (/Users/emil/code/user-system/node_modules/enhanced-resolve/lib/createInnerCallback.js:31:19)\n    at next (/Users/emil/code/user-system/node_modules/tapable/lib/Tapable.js:252:11)");
+
+/***/ }),
+/* 61 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
