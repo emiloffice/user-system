@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Home;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 use Validator;
+use Ramsey\Uuid\Uuid;
 use Illuminate\Http\Request;
 use Postmark\PostmarkClient;
 use App\Http\Controllers\Controller;
