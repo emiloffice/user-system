@@ -34,6 +34,7 @@ class TwitterController extends Controller
             return redirect('login');
         }else{
             $user = Socialite::driver('twitter')->user();
+            dd($user);
             if ($user){
                 $res = User::where('email', $user->email)->first();
                 if ($res){
