@@ -53,16 +53,21 @@ class FbController extends Controller
     }
     public function handleProviderCallback(Request $request)
     {
-        $user = Socialite::driver('facebook')->user();
-        $client = new Client(); //GuzzleHttp\Client
-        $result = $client->get('https://graph.facebook.com/oauth/client_code?', [
+        if ($request->has('code')) {
+            dd($request->code);
+        }else{
+            $user = Socialite::driver('facebook')->user();
+            $client = new Client(); //GuzzleHttp\Client
+            $result = $client->get('https://graph.facebook.com/oauth/client_code?', [
                 'access_token' => $user->token,
                 'client_id' => env('FACEBOOK_APP_ID'),
                 'client_secret'=> env('FACEBOOK_APP_SECRET'),
                 'redirect_uri'=>'http://user.multiverseinc.com/OAuth/fb-callback'
-        ]);
-        $user->result = $result;
-        dd($user);
+            ]);
+            $user->result = $result;
+            dd($user);
+        }
+
     }
 
     public function getAccessToken(Request $request)
