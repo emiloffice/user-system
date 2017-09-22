@@ -58,13 +58,13 @@ class FbController extends Controller
         }else{
             $user = Socialite::driver('facebook')->user();
             $client = new Client(); //GuzzleHttp\Client
-            $result = $client->get('https://graph.facebook.com/oauth/client_code?', [
+            /*$result = $client->get('https://graph.facebook.com/oauth/client_code?', [
                 'access_token' => $user->token,
                 'client_id' => env('FACEBOOK_APP_ID'),
                 'client_secret'=> env('FACEBOOK_APP_SECRET'),
                 'redirect_uri'=>'http://user.multiverseinc.com/OAuth/fb-callback'
             ]);
-            $user->result = $result;
+            $user->result = $result;*/
             dd($user);
         }
 
