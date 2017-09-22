@@ -40,6 +40,7 @@ Route::group([
 ], function ($router) {
     $router::get('/ambassador','AmbassadorController@index');
     $router::get('/uc','AmbassadorController@center');
+    $router::get('/user-center','AmbassadorController@center');
     $router::get('/login','UserController@login');
     $router::post('/login','UserController@login');
     $router::get('/register','UserController@register');
