@@ -31,7 +31,7 @@ class FbController extends Controller
                     $user_auth->certificate = $user->token;//access_token
                     $user_auth->save();
                     $res->nick_name = $user->name;
-                    $user->gender=='male' ? $res->gender = 1 : $res->gender = 2;
+                    $user->user['gender'] =='male' ? $res->gender = 1 : $res->gender = 2;
                     $res->face = $user->avatar;
                     $res->face200 = $user->avatar;
                     $res->faceSrc = $user->avatar_original;
