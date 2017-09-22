@@ -44,4 +44,10 @@ Route::group([
     $router::post('/login','UserController@login');
     $router::get('/register','UserController@register');
     $router::post('/register','UserController@register');
+    $router->any('oauth-confirm-email', 'UserController@OAuthConfirmEmail');
+    $router->any('confirm-email', 'UserController@confirmEmail');
+    $router->any('verify-email-default', 'UserController@confirmEmail');
+    $router->any('send-email', 'UserController@sendConfirmEmail');
+    $router->any('verify-email-oauth', 'UserController@OauthVerifyUserEmail');
+    $router->any('verify-email-default', 'UserController@defaultVerifyUserEmail');
 });

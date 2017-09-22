@@ -134,4 +134,149 @@ class UserController extends Controller
         else
             return false;
     }
+    /*
+     * @param int $no_of_codes//定义一个int类型的参数 用来确定生成多少个优惠码
+     * @param array $exclude_codes_array//定义一个exclude_codes_array类型的数组
+     * @param init $code_length //定义一个code_length的参数来确定优惠码的长度
+     * @return array//返回数组
+     * */
+    public function referralCode($no_of_codes, $exclude_codes_array='', $code_length = 6)
+    {
+        $characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        $promotion_codes = array();//这个数组用来接收生成的优惠码
+        for ($j = 0; $j < $no_of_codes; $j++){
+            $code = "";
+            for ($i = 0; $i < $code_length; $i++){
+                $code .= $characters[mt_rand(0, strlen($characters) - 1)];
+            }
+            //如果生成的6位随机数不在我们定义的$promotion_codes函数里
+            if (!in_array($code, $promotion_codes)){
+                if (is_array($exclude_codes_array)){
+                    if (!in_array($code, $exclude_codes_array)){//排除已经使用的优惠码数
+                        $promotion_codes[$j] = $code;//将新生成的优惠码赋值给promotion_codes数组
+                    }else{
+                        $j--;
+                    }
+                }else {
+                    $promotion_codes[$j] = $code;//将优惠码赋值给数组
+                }
+            }else{
+                $j--;
+            }
+        }
+        if ($no_of_codes = 1){
+            $promotion_codes = $promotion_codes[0];
+        }
+        return $promotion_codes;
+    }
+    /*
+     *
+     * */
+    public function confirmEmail(Request $request)
+    {
+        $HTTPS_REQUEST = env('HTTPS_REQUEST');
+        $email = session('CONFIRM_EMAIL');
+        if ($email){
+            return view('home.confirmEmail',compact('email','HTTPS_REQUEST'));
+        }else{
+            $user = session('USER_INFO');
+            if($user->email!==''||$user->email!==null){
+                $email = $user->email;
+                return view('home.confirmEmail',compact('email','HTTPS_REQUEST'));
+            }
+            else {
+                return view('home.confirmEmail',compact('HTTPS_REQUEST'));
+            }
+        }
+    }
+    public function OAuthConfirmEmail()
+    {
+        $user = session('OAUTH_INFO');
+        $HTTPS_REQUEST = env('HTTPS_REQUEST');
+        $token = $user->token;
+        $email = $user->email;
+        $res = DB::table('users')->where('oauth_token', $token)->orWhere('email', $email)->first();
+
+        if ($res){
+            Auth::attempt(['email'=>$res->email, 'password' => '123456']);
+            return redirect('user-center');
+        }else{
+            if($user->email!==''||$user->email!==null){
+                $email = $user->email;
+                return view('home.OauthConfirmEmail',compact('email','HTTPS_REQUEST'));
+            }
+            else {
+                return view('home.OauthConfirmEmail', compact('HTTPS_REQUEST'));
+            }
+        }
+
+    }
+    public function sendConfirmEmail(Request $request)
+    {
+        $client = new PostmarkClient('dd3a9434-fae6-4fe4-a67c-e3579d36c637');
+        // Send an email:
+        $code = $this->referralCode('1','','6');
+        session(['EMAIL_CONFIRM_CODE'=>$code]);
+        $sendResult = $client->sendEmail(
+            "emil@multiverseinc.com",
+            $request->email,
+            $code.", Verification code from Multiverse Entertainment LLC ",
+            "Hello, This is your sign up verification code：".$code
+        );
+        return json_encode($sendResult);
+    }
+    public function OauthVerifyUserEmail(Request $request)
+    {
+        $HTTPS_REQUEST = env('HTTPS_REQUEST');
+        $code = session('EMAIL_CONFIRM_CODE');
+        $validator = Validator::make($request->all(), [
+            'email' => 'required|unique:users|email',
+            'code' => 'required|min:4|max:6',
+        ]);
+        if ($validator->fails()){
+            return Redirect::back()->withErrors($validator)->withInput();
+        }else{
+            if ($code === $request->code){
+                $user = session('OAUTH_INFO');
+                $email = $user->email = $request->email;
+                $this->createUser($user,'twitter');
+                Point::where('referral_code',$request->referral_code)->increment('points', 10);
+                Auth::attempt(['email' => $email, 'password' => '123456']);
+                return redirect('user-center');
+            }else{
+                return Redirect::back()->withInput()->with('codeError','The Verification code you entered is incorrect ！');
+
+            }
+        }
+    }
+    public function defaultVerifyUserEmail(Request $request)
+    {
+        $HTTPS_REQUEST = env('HTTPS_REQUEST');
+        $code = session('EMAIL_CONFIRM_CODE');
+        $validator = Validator::make($request->all(),[
+            'code' => 'required|min:4|max:6',
+        ]);
+        if ($validator->fails()){
+            return Redirect::back()->withInput()->withErrors($validator);
+        }else{
+            if ($code === $request->code){
+                $email = $request->email;
+                $user = DB::table('users')->where('email',$email)->get();
+                if ($user[0]!==''||$user[0]!==null){
+                    $user_id = $user[0]->id;
+                    DB::update('update points set points = ? where user_id = ?',[10, $user_id]);
+                    DB::update('update users set status = ? where id = ?',[1, $user_id]);
+                    if (DB::table('points')->where('referral_code', session('FROM_REFERRAL_CODE'))->first()){
+                        DB::update('update points set points = points + ? where referral_code = ?',[10, session('FROM_REFERRAL_CODE')]);
+                    }
+                    Auth::attempt(['email'=>$email, 'password'=> session('USER_PWD')]);
+                    return redirect('user-center');
+                }
+                return redirect('confirm-email');
+            }else{
+                $validator->errors()->add('code', 'The Verification code you entered is incorrect ！');
+                return Redirect::back()->withInput()->withErrors($validator);
+            }
+        }
+    }
 }
