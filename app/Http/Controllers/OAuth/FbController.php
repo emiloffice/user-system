@@ -85,8 +85,14 @@ class FbController extends Controller
                     $point->points = 10;
                     $point->points_level = '1';
                     $point->save();
-                    Auth::attempt(['email'=>$user->email, 'password'=>'123456']);
-                    return redirect('user-center');
+                    if ($user->email!==''){
+                        Auth::attempt(['email'=>$user->email, 'password'=>'123456']);
+                        return redirect('user-center');
+                    }else{
+                        session(['OAUTH_INFO'=>$user]);
+                        return redirect('oauth-confirm-email');
+                    }
+
                 }
             }else{
                 return redirect('login');
