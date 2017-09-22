@@ -20,6 +20,11 @@ class FbController extends Controller
     }
     public function handleProviderCallback(Request $request)
     {
+        if ($request->has('error')) {
+
+        }else{
+
+
             $user = Socialite::driver('facebook')->user();
             if ($user){
                 $res = User::where('email', $user->email)->first();
@@ -86,6 +91,7 @@ class FbController extends Controller
             }else{
                 return redirect('login');
             }
+        }
     }
 
     public function getAccessToken(Request $request)

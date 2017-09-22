@@ -30,7 +30,7 @@ class TwitterController extends Controller
      */
     public function handleProviderCallback(Request $request)
     {
-        if ($request->has('denied')) {
+        if ($request->has('error')) {
             return redirect('login');
         }else{
             $user = Socialite::driver('twitter')->user();
