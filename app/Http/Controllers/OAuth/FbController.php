@@ -29,7 +29,7 @@ class FbController extends Controller
                     $user_auth->identity_type = 7;//from facebook
                     $user_auth->identity = 'facebook';//from facebook
                     $user_auth->certificate = $user->token;//access_token
-                    $user_auth-save();
+                    $user_auth->save();
                     $res->nick_name = $user->name;
                     $user->gender=='male' ? $res->gender = 1 : $res->gender = 2;
                     $res->face = $user->avatar;
