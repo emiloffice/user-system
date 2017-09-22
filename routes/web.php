@@ -43,6 +43,7 @@ Route::group([
     $router::get('/user-center','AmbassadorController@center');
     $router::get('/login','UserController@login');
     $router::post('/login','UserController@login');
+    $router->any('logout', 'UserController@logout');
     $router::get('/register','UserController@register');
     $router::post('/register','UserController@register');
     $router->any('oauth-confirm-email', 'UserController@OAuthConfirmEmail');
