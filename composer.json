@@ -9,6 +9,7 @@
         "doctrine/dbal": "^2.5",
         "facebook/graph-sdk": "^5.6",
         "fideloper/proxy": "~3.3",
+        "guzzlehttp/guzzle": "6.*",
         "laravel/framework": "5.5.*",
         "laravel/passport": "^4.0",
         "laravel/socialite": "^3.0",
@@ -16,7 +17,7 @@
         "mews/captcha": "^2.1",
         "mpociot/laravel-apidoc-generator": "^2.0",
         "webpatser/laravel-uuid": "2.*",
-        "guzzlehttp/guzzle": "6.*"
+        "wildbit/postmark-php": "^2.3"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

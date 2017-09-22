@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Validator;
 use Illuminate\Http\Request;
+use Postmark\PostmarkClient;
 use App\Http\Controllers\Controller;
 
 class UserController extends Controller
