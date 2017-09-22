@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Home;
 
+use App\Point;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
