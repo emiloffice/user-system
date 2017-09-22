@@ -53,8 +53,8 @@
 
                 <div class="login-input-group">
                     <button class="login-btn-default btn-submit">Log In</button>
-                    <a class="reg-btn-oauth" href="{{url('OAuth/facebook', '',  $HTTPS_REQUEST)}}"><p><i class="fa fa-facebook"></i> Log In</p></a>
-                    <a class="reg-btn-oauth" href="{{url('OAuth/twitter', '',  $HTTPS_REQUEST)}}"><p><i class="fa fa-twitter"></i> Log In</p></a>
+                    <a class="reg-btn-oauth" href="{{url('OAuth/fb-login', '',  $HTTPS_REQUEST)}}"><p><i class="fa fa-facebook"></i> Log In</p></a>
+                    <a class="reg-btn-oauth" href="{{url('OAuth/twitter-login', '',  $HTTPS_REQUEST)}}"><p><i class="fa fa-twitter"></i> Log In</p></a>
                 </div>
                 <div class="login-input-group">
                     <p>if you don't have an account, <a href="{{ url('register', '',  $HTTPS_REQUEST) }}" class="login-href">sign up</a> today!</p>
