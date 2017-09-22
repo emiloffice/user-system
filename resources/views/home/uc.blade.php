@@ -18,7 +18,7 @@
 <body>
 <div class="uc-header">
     <div class="container">
-        <div class="logo"><img src="//{{getenv('RESOURCE_PATH')}}/img/logo.png" alt="logo"></div>
+        <div class="logo"><a href="{{url('ambassador','',false)}}"><img src="//{{getenv('RESOURCE_PATH')}}/img/logo.png" alt="logo"></a></div>
         <div class="right">
             <a href="{{url('ambassador', '', $HTTPS_REQUEST)}}" class="">Home Page</a>
             <a href="{{url('logout', '', $HTTPS_REQUEST)}}" class="logout">Logout</a>
