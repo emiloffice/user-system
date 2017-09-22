@@ -45,7 +45,7 @@ class TwitterController extends Controller
                     $user_auth->certificate = $user->token;//access_token
                     $user_auth->save();
                     $res->nick_name = $user->name;
-                    $user->user['gender'] =='male' ? $res->gender = 1 : $res->gender = 2;
+                    $res->gender = 0;
                     $res->face = $user->avatar;
                     $res->face200 = $user->avatar;
                     $res->faceSrc = $user->avatar_original;
@@ -60,7 +60,7 @@ class TwitterController extends Controller
                     $u->password = bcrypt('123456');
                     $u->nick_name = $user->name;
                     $u->name = $user->name;
-                    $user->user['gender'] =='male' ? $u->gender = 1 : $u->gender = 2;
+                    $u->gender = 0;
                     $u->face = $user->avatar;
                     $u->status = 1;//邮箱验证通过
                     $u->face200 = $user->avatar;
