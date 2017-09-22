@@ -59,7 +59,7 @@ class FbController extends Controller
                 'access_token' => $user->token,
                 'client_id' => env('FACEBOOK_APP_ID'),
                 'client_secret'=> env('FACEBOOK_APP_SECRET'),
-                'redirect_uri'=>'http://user.multiverseinc.com/OAuth/fb-get-token'
+                'redirect_uri'=>'http://user.multiverseinc.com/OAuth/fb-callback'
         ]);
         $user->result = $result;
         dd($user);
