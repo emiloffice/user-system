@@ -3,11 +3,12 @@
 namespace App\Http\Controllers\OAuth;
 
 use App\UserAuth;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Laravel\Socialite\Facades\Socialite;
-use League\OAuth1\Client\Server\User;
 use Ramsey\Uuid\Uuid;
+
 class FbController extends Controller
 {
     public function redirectToProvider()
