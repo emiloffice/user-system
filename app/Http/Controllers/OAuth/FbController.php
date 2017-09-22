@@ -43,7 +43,7 @@ class FbController extends Controller
                     $u->email = $user->email;
                     $u->password = bcrypt('123456');
                     $u->nick_name = $user->name;
-                    $user->user['gender']=='male' ? $res->gender = 1 : $res->gender = 2;
+                    $user->user['gender'] =='male' ? $u->gender = 1 : $u->gender = 2;
                     $u->face = $user->avatar;
                     $u->face200 = $user->avatar;
                     $u->faceSrc = $user->avatar_original;
