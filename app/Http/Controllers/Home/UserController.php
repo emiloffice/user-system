@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Home;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Validator;
 use Illuminate\Http\Request;
