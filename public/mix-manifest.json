@@ -1,5 +1,9 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/footer.css": "/css/footer.css",
+    "/css/ambassador.css": "/css/ambassador.css",
+    "/css/reg.css": "/css/reg.css",
+    "/css/uc.css": "/css/uc.css",
+    "/css/login.css": "/css/login.css",
     "/css/app.css": "/css/app.css"
 }

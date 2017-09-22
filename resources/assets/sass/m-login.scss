@@ -1,0 +1,102 @@
+// Variables
+@import "variables";
+.login-content{
+  background: url(images/login-bg.png) no-repeat center;
+  height: calc(100% - 205px);
+  top: 60px;
+  position: fixed;
+  padding: calc(50% - 130px) 0;
+  width: 100%;
+  .panel {
+    background: url(images/reg-panel-bg-m.png) no-repeat center;
+    height: 3.5rem;
+    background-size: cover;
+    position: fixed;
+    width: 90%;
+    padding-top: 45px;
+    left: 5%;
+    border-radius: 5px;
+  }
+  .login-input-group{
+    width: 90%;
+    max-width: 3.8rem;
+    margin: 0 auto;
+    text-align: left;
+    padding-top: 0.15rem;
+    label {
+      display: block;
+      color: #ffffff;
+    }
+    input{
+      width: 100%;
+      background: none;
+      border: $input-border;
+      padding: 0 10px;
+    }
+    .default-input-min{
+      width: 70%;
+      background: none;
+      border: $input-border;
+      padding: 0 10px;
+      margin-right: 20px;
+    }
+    >p{
+      color: #ffffff;
+    }
+    .btn-send{
+      display: inline-block;
+      width: 90px;
+      height: inherit;
+      background: #ffffff;
+      text-align: center;
+      cursor: pointer;
+    }
+    .login-href {
+      color: #ff00d8;;
+    }
+  }
+ }
+
+.login-btn-default {
+  width: 1.17rem;
+  height: 0.3rem;
+  background-color: #bfbfbf;
+  color: #000000;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 3px;
+  margin-left: 9px;
+}
+.login-btn-default:first-of-type{
+  margin-left: 0;
+}
+.reg-btn-oauth {
+  display: inline-block;
+  width: 1.17rem;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  text-align: center;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 3px;
+  margin-left: 3%;
+  cursor: pointer;
+}
+.reg-btn-oauth:link,.reg-btn-oauth:visited,.reg-btn-oauth:hover,.reg-btn-oauth:active{
+  color: #000000;
+  text-decoration: none;
+  width: 30%;
+}
+.btn-submit {
+  background-color: #ffae00;
+}
+.login-btn-default.btn-submit {
+  margin-top: 0.15rem;
+  width: 30%;
+}

@@ -1,0 +1,217 @@
+// Variables
+@import "variables";
+.uc-header{
+  background: $theme-bg-black;
+  height: 1rem;
+  line-height: 1rem;
+  .logo{
+    float: left;
+  }
+  .right{
+    float: right;
+    >a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 18px;
+      padding: 0 15px;
+      border-right: 3px solid #ffffff;
+    }
+    >a:last-of-type {
+      border-right: 0;
+    }
+  }
+
+}
+.uc-container {
+  max-width: 8.2rem;
+  width: 90%;
+  margin: 0 auto;
+  color: #ffffff;
+
+  >.title {
+    margin-top: 15px;
+    line-height: 14px;
+    height: 14px;
+    margin-bottom: 15px;
+  }
+  .line{
+    display: inline-block;
+    height: 12px;
+    line-height: 12px;
+    width: 5px;
+    color: #ffae00;
+    background: #ffae00;
+    margin-right: 5px;
+  }
+  .rank{
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
+    color: #ffffff;
+    font-size: 18px;
+  }
+
+}
+/*.uc-header {
+  background: $theme-bg-black;
+  height: 1rem;
+  line-height: 1rem;
+  .right a{
+
+
+  }
+}*/
+.uc-content {
+  background-color: rgba(0,0,0,.95);
+  background: url(/images/uc-bg.jpg) no-repeat center;
+  padding: 1.5rem 0;
+  height: 10.35rem;
+  .panel {
+    background: url('/images/uc-panel-bg.png') no-repeat center;
+    min-height: 7.15rem;
+    max-width: 9.05rem;
+    width: 95%;
+    margin: 0 auto;
+    background-size: cover;
+    padding-top: 1.38rem;
+    position: relative;
+    .rank{
+      position: absolute;
+      bottom: 10px;
+      right: 50px;
+      color: #ffffff;
+      font-size: 18px;
+    }
+  }
+}
+.uc-footer {
+  padding: 0.45rem 0;
+  background-color: #000000;
+  color: #6a6a6a;
+  a {
+    color: inherit;
+  }
+}
+.main-table {
+  width: 8.2rem;
+  height: 3.8rem;
+  margin: 0 auto;
+  border: $border-style;
+  color: #ffffff;
+  .left{
+    width: 4.92rem;
+    float: left;
+    height: 100%;
+    border-right: $border-style;
+    overflow: hidden;
+    >div {
+      border-bottom: $border-style;
+      padding: 0.1rem;
+      font-size: 0.12rem;
+      p {
+        font-size: 0.12rem;
+      }
+      input {
+        width: 3.18rem;
+        height: 0.37rem;
+        border: $border-style;
+        background-color: rgba(255,255,255,0.1);
+        padding: 0 0.1rem;
+      }
+      button.refer {
+        width: 1.14rem;
+        height: 0.38rem;
+        border: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: #ffae00;
+        color: #000000;
+        margin-left: 0.2rem;
+      }
+      a{
+        color: #00ffff;
+      }
+    }
+    >div:last-of-type{
+      border-bottom: none;
+    }
+  }
+  .right{
+    width: calc(100% - 4.92rem);
+    float: left;
+    height: 100%;
+    padding: 0.1rem;
+    .profile{
+      width: 1.98rem;
+      height: 1.98rem;
+      margin: 0 auto;
+      margin-top: 0.2rem;
+      position: relative;
+      img{
+        width: 100%;
+        border-radius: 50%;
+        border: $border-style;
+      }
+      .name{
+        position: absolute;
+        bottom: 10px;
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: #ffae00;
+      }
+      .level{
+        padding: 0;
+        margin: 0;
+      }
+      .progress{
+        height: 10px!important;
+        margin-top: 0px!important;
+        border: 1px solid #0ff;
+        background-color: rgba(255,255,255,.1);
+        .progress-bar{
+          background-color: #0ff;
+        }
+      }
+    }
+    .reward-list{
+      margin: 0.6rem auto 0;
+      height: 0.72rem;
+      padding-right: 40px;
+      li{
+        height: 0.7rem;
+        width: 0.65rem;
+        float: left;
+        list-style: none;
+        margin-right: 0.2rem;
+        border: $border-style;
+        img {
+          width:100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+}
+.friends{
+  li{
+    list-style: none;
+    width: 0.7rem;
+    height: 0.7rem;
+    background: #000000;
+    border-radius: 50%;
+    float: left;
+    margin-right: 0.7rem;
+    text-align: center;
+    img {
+      width: 0.7rem;
+      height: 0.7rem;
+      border-radius: 50%;
+    }
+  }
+  li:last-of-type{
+    margin-right: 0;
+  }
+}

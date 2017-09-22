@@ -19,18 +19,18 @@
 </head>
 <div class="header">
     <div class="container">
-        <div class="logo"><a href="{{url('ambassador','',true)}}"><img src="//{{getenv('RESOURCE_PATH')}}/img/logo.png" alt="logo"></a></div>
+        <div class="logo"><a href="{{url('ambassador','',false)}}"><img src="//{{getenv('RESOURCE_PATH')}}/img/logo.png" alt="logo"></a></div>
         <div class="right">
             @if($user == null || !isset($user))
                 @if(isset($code))
-                    <a href="{{url('register', '', true)}}?code={{$code}}" class="logout">Join our ambassador program</a>
+                    <a href="{{url('register', '', false)}}?code={{$code}}" class="logout">Join our ambassador program</a>
                 @else
-                    <a href="{{url('register', '', true)}}" class="logout">Join our ambassador program</a>
+                    <a href="{{url('register', '', false)}}" class="logout">Join our ambassador program</a>
                 @endif
-                <a href="{{url('login', '', true)}}" class="logout">Log in</a>
+                <a href="{{url('login', '', false)}}" class="logout">Log in</a>
             @else
-                <a href="{{url('user-center', '', true)}}" class="">My Profile</a>
-                <a href="{{url('logout', '', true)}}" class="">Logout</a>
+                <a href="{{url('user-center', '', false)}}" class="">My Profile</a>
+                <a href="{{url('logout', '', false)}}" class="">Logout</a>
             @endif
         </div>
     </div>
@@ -158,12 +158,12 @@
         layer.confirm('Log in to your Multiverse account, or sign up now!', {
             btn: ['Log in','Sign up'], title: 'Message'
         }, function(){
-            window.location.href = "{{ url('login', '', true) }}";
+            window.location.href = "{{ url('login', '', false) }}";
         }, function(){
             @if(isset($code))
-                window.location.href = "{{ url('register', '' , true) }}?code={{$code}}";
+                window.location.href = "{{ url('register', '' , false) }}?code={{$code}}";
             @else
-                window.location.href = "{{ url('register', '' , true) }}";
+                window.location.href = "{{ url('register', '' , false) }}";
             @endif
         });
     }

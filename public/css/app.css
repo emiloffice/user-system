@@ -5,12 +5,12 @@ html {
 }
 
 body {
-  font-size: 0.14rem;
+  font-size: 0.16rem;
 }
 
 p {
-  font-size: 14px;
-  font-size: 0.14rem;
+  font-size: 16px;
+  font-size: 0.16rem;
 }
 
 .special-text {
@@ -8365,5 +8365,36 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+
+html {
+  font-size: 100px;
+}
+
+body {
+  font-size: 0.16rem;
+}
+
+p {
+  font-size: 16px;
+  font-size: 0.16rem;
+}
+
+.fl {
+  float: left;
+}
+
+.required {
+  color: red;
+  padding-right: 3px;
+}
+
+.error-input {
+  border: 1px solid #FF0000 !important;
+}
+
+.line-throught {
+  text-decoration: line-through;
+  color: #eeeeee;
 }
 

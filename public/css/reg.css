@@ -3,12 +3,12 @@ html {
 }
 
 body {
-  font-size: 0.14rem;
+  font-size: 0.16rem;
 }
 
 p {
-  font-size: 14px;
-  font-size: 0.14rem;
+  font-size: 16px;
+  font-size: 0.16rem;
 }
 
 .special-text {
@@ -23,14 +23,15 @@ p {
 
 .reg-content {
   background: url("/img/login-bg.png") no-repeat center;
-  height: 8.35rem;
+  height: 10.35rem;
 }
 
 .reg-content .panel {
   background: url("/img/login-panel-bg.png") no-repeat center;
-  height: 4.5rem;
+  height: 5.5rem;
   margin-top: 2.2rem;
   padding-top: 0.7rem;
+  background-size: contain;
 }
 
 .reg-content .reg-input-group {

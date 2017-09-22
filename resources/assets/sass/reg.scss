@@ -7,12 +7,13 @@
 }
 .reg-content{
   background: url("/img/login-bg.png") no-repeat center;
-  height: 8.35rem;
+  height: 10.35rem;
   .panel {
     background: url("/img/login-panel-bg.png") no-repeat center;
-    height: 4.5rem;
+    height: 5.5rem;
     margin-top: 2.2rem;
     padding-top: 0.7rem;
+    background-size: contain
   }
   .reg-input-group{
     width: 90%;
