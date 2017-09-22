@@ -1,17 +1,1 @@
-html {
-  font-size: 100px;
-}
-
-body {
-  font-size: 0.16rem;
-}
-
-p {
-  font-size: 16px;
-  font-size: 0.16rem;
-}
-
-.special-text {
-  color: #ff00d8;
-}
-
+html{font-size:100px}body{font-size:.16rem}p{font-size:16px;font-size:.16rem}.special-text{color:#ff00d8}

@@ -1,12 +1,12 @@
 // Variables
 @import "variables";
 .reg-content{
-  background: url("/img/login-bg.png") no-repeat center;
-  height: calc(100% - 205px);
+  background: url(/img/login-bg.png) no-repeat center;
   top: 60px;
-  position: fixed;
+  position: relative;
   padding: calc(50% - 155px) 0px;
   width: 100%;
+  min-height: 510px;
   .panel {
     background: url("/images/reg-panel-bg-m.png") no-repeat center;
     height: 4rem;
