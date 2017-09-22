@@ -33,6 +33,8 @@ class FbController extends Controller
                     $res->face200 = $user->avatar;
                     $res->faceSrc = $user->avatar_original;
                     $res->update();
+                    Auth::attempt(['email'=>$user->email, 'password'=>'123456']);
+                    return redirect('user-center');
                 }else{
                     $guid = Uuid::generate();
                     $u = new User;
@@ -47,11 +49,11 @@ class FbController extends Controller
                     $u->save();
                     if ($u){
                         $user_auth = new UserAuth;
-                        $user_auth->guid = $res->guid;
+                        $user_auth->guid = $u->guid;
                         $user_auth->identity_type = 7;//from facebook
                         $user_auth->identity = 'facebook';//from facebook
                         $user_auth->certificate = $user->token;//access_token
-                        $user_auth-save();
+                        $user_auth->save();
                         Auth::attempt(['email'=>$user->email, 'password'=>'123456']);
                         return redirect('user-center');
                     }
