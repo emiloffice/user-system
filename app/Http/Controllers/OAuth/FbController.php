@@ -48,6 +48,7 @@ class FbController extends Controller
                     $u->name = $user->name;
                     $user->user['gender'] =='male' ? $u->gender = 1 : $u->gender = 2;
                     $u->face = $user->avatar;
+                    $u->status = 1;//邮箱验证通过
                     $u->face200 = $user->avatar;
                     $u->faceSrc = $user->avatar_original;
                     $u->save();
