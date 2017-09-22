@@ -2,11 +2,11 @@
 @import "variables";
 .login-content{
   background: url(/images/login-bg.png) no-repeat center;
-  height: calc(100% - 205px);
   top: 60px;
-  position: fixed;
+  position: relative;
   padding: calc(50% - 130px) 0;
   width: 100%;
+  min-height: 510px;
   .panel {
     background: url(/images/reg-panel-bg-m.png) no-repeat center;
     height: 3.5rem;
