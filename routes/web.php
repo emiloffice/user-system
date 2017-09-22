@@ -41,5 +41,7 @@ Route::group([
     $router::get('/ambassador','AmbassadorController@index');
     $router::get('/uc','AmbassadorController@center');
     $router::get('/login','UserController@login');
+    $router::post('/login','UserController@login');
     $router::get('/register','UserController@register');
+    $router::post('/register','UserController@register');
 });
