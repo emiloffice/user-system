@@ -15,23 +15,27 @@ p {
   color: #ff00d8;
 }
 
-.reg-content {
-  background: url("/img/login-bg.png") no-repeat center;
+.login-content {
+  background: url(/images/login-bg.png) no-repeat center;
   height: calc(100% - 205px);
   top: 60px;
   position: fixed;
-  padding: calc(50% - 155px) 0px;
+  padding: calc(50% - 130px) 0;
   width: 100%;
 }
 
-.reg-content .panel {
-  background: url("/images/reg-panel-bg-m.png") no-repeat center;
-  height: 4rem;
+.login-content .panel {
+  background: url(/images/reg-panel-bg-m.png) no-repeat center;
+  height: 3.5rem;
+  background-size: cover;
+  position: fixed;
   width: 90%;
-  margin: 0 auto;
+  padding-top: 45px;
+  left: 5%;
+  border-radius: 5px;
 }
 
-.reg-content .reg-input-group {
+.login-content .login-input-group {
   width: 90%;
   max-width: 3.8rem;
   margin: 0 auto;
@@ -39,29 +43,45 @@ p {
   padding-top: 0.15rem;
 }
 
-.reg-content .reg-input-group label {
+.login-content .login-input-group label {
   display: block;
   color: #ffffff;
 }
 
-.reg-content .reg-input-group input {
+.login-content .login-input-group input {
   width: 100%;
   background: none;
   border: 1px solid #00ffff;
   padding: 0 10px;
 }
 
-.reg-content .reg-input-group > p {
+.login-content .login-input-group .default-input-min {
+  width: 70%;
+  background: none;
+  border: 1px solid #00ffff;
+  padding: 0 10px;
+  margin-right: 20px;
+}
+
+.login-content .login-input-group > p {
   color: #ffffff;
 }
 
-.reg-content .reg-input-group .login-href {
+.login-content .login-input-group .btn-send {
+  display: inline-block;
+  width: 90px;
+  height: inherit;
+  background: #ffffff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.login-content .login-input-group .login-href {
   color: #ff00d8;
 }
 
-.reg-btn-default {
-  display: inline-block;
-  width: 30%;
+.login-btn-default {
+  width: 1.17rem;
   height: 0.3rem;
   background-color: #bfbfbf;
   color: #000000;
@@ -70,12 +90,16 @@ p {
   -moz-appearance: none;
   appearance: none;
   border-radius: 3px;
-  margin-left: 3%;
+  margin-left: 9px;
+}
+
+.login-btn-default:first-of-type {
+  margin-left: 0;
 }
 
 .reg-btn-oauth {
   display: inline-block;
-  width: 30%;
+  width: 1.17rem;
   height: 0.3rem;
   line-height: 0.3rem;
   text-align: center;
@@ -96,23 +120,15 @@ p {
 .reg-btn-oauth:active {
   color: #000000;
   text-decoration: none;
-}
-
-.reg-btn-default:first-of-type {
-  margin-left: 0;
+  width: 30%;
 }
 
 .btn-submit {
   background-color: #ffae00;
 }
 
-.reg-footer {
-  padding: 0.45rem 0;
-  background-color: #000000;
-  color: #6a6a6a;
-}
-
-.reg-footer a {
-  color: inherit;
+.login-btn-default.btn-submit {
+  margin-top: 0.15rem;
+  width: 30%;
 }
 
