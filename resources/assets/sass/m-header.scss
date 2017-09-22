@@ -1,0 +1,42 @@
+// Variables
+@import "variables";
+@font-face {
+  font-family: prototype;
+  src: url('/fonts/PROTOTYPE.TTF');
+}
+.header {
+  background: #000;
+  height: 0.6rem;
+  line-height: 0.6;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  .logo{
+    float: left;
+    width: 50%;
+    line-height: 0.6rem;
+    img{
+      width: 100%;
+      height: inherit;
+      line-height: 0.6rem;
+    }
+  }
+  .right{
+    float: right;
+    width: 50%;
+    text-align: right;
+    line-height: 0.6rem;
+    >a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 14px;
+      padding: 0 10px;
+      border-right: 2px solid #ffffff;
+    }
+    >a:last-of-type {
+      border-right: 0;
+      padding-right: 0;
+    }
+  }
+}

@@ -5,5 +5,9 @@
     "/css/reg.css": "/css/reg.css",
     "/css/uc.css": "/css/uc.css",
     "/css/login.css": "/css/login.css",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/css/m-reg.css": "/css/m-reg.css",
+    "/css/m-post.css": "/css/m-post.css",
+    "/css/m-uc.css": "/css/m-uc.css",
+    "/js/m.js": "/js/m.js"
 }

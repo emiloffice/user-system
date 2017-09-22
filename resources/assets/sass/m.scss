@@ -1,0 +1,41 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+html {
+  font-size: 100px;
+}
+
+body {
+  font-size: 0.14rem;
+}
+
+p {
+  font-size: 14px;
+  font-size: 0.14rem;
+}
+.required{
+  color: red;
+  padding-right: 3px;
+}
+.error-input{
+  border: 1px solid red!important;
+}
+.line-throught{
+  text-decoration: line-through;
+  color: #eeeeee;
+}
+// Variables
+@import "variables";
+// header part
+@import "m-header";
+// footer part
+@import "m-footer";
+// usercenter page
+@import "m-uc";
+// login poage
+@import "m-login";
+// register poage
+@import "m-reg";
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
