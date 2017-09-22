@@ -69,11 +69,11 @@
                 </div>
                 <div class="reg-input-group">
                     <button class="reg-btn-default btn-submit">Sign up</button>
-                    <a class="reg-btn-oauth" href="{{ url('OAuth/fb-login', '', true)}}"><p><i class="fa fa-facebook"></i> Sign up</p></a>
-                    <a class="reg-btn-oauth" href="{{ url('OAuth/twitter-login','', true) }}"><p><i class="fa fa-twitter"></i> Sign up</p></a>
+                    <a class="reg-btn-oauth" href="{{ url('OAuth/fb-login', '', env('HTTPS_REQUEST'))}}"><p><i class="fa fa-facebook"></i> Sign up</p></a>
+                    <a class="reg-btn-oauth" href="{{ url('OAuth/twitter-login','', env('HTTPS_REQUEST')) }}"><p><i class="fa fa-twitter"></i> Sign up</p></a>
                 </div>
                 <div class="reg-input-group">
-                    <p>Have an account already? <a href="{{ url('login', '', true) }}" class="login-href">Login</a> now!</p>
+                    <p>Have an account already? <a href="{{ url('login', '', env('HTTPS_REQUEST')) }}" class="login-href">Login</a> now!</p>
                 </div>
             </form>
     </div>

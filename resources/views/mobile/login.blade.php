@@ -19,7 +19,7 @@
 <body>
     <div class="header">
         <div class="container">
-            <div class="logo"><a href="{{url('ambassador','',true)}}"><img src="//{{getenv('RESOURCE_PATH')}}/img/logo.png" alt="logo"></a></div>
+            <div class="logo"><a href="{{url('ambassador','',env('HTTPS_REQUEST'))}}"><img src="//{{getenv('RESOURCE_PATH')}}/img/logo.png" alt="logo"></a></div>
         </div>
     </div>
     <div class="login-content">

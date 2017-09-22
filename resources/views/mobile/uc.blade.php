@@ -20,8 +20,8 @@
     <div class="container">
         <div class="logo"><img src="//{{getenv('RESOURCE_PATH')}}/img/logo.png" alt="logo"></div>
         <div class="right">
-            <a href="{{url('ambassador', '', true)}}" class="">Home Page</a>
-            <a href="{{url('logout', '', true)}}" class="logout">Logout</a>
+            <a href="{{url('ambassador', '', env('HTTPS_REQUEST'))}}" class="">Home Page</a>
+            <a href="{{url('logout', '', env('HTTPS_REQUEST'))}}" class="logout">Logout</a>
         </div>
     </div>
 </div>
