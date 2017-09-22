@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 use Validator;
-use Ramsey\Uuid\Uuid;
+use Webpatser\Uuid\Uuid;
 use Illuminate\Http\Request;
 use Postmark\PostmarkClient;
 use App\Http\Controllers\Controller;
@@ -55,6 +55,7 @@ class UserController extends Controller
     {
         $HTTPS_REQUEST = env('HTTPS_REQUEST');
         if ($request->isMethod('post')){
+            $uuid = Uuid::generate();
             $validator = Validator::make($request->all(), [
                 'email' => 'required|unique:users',
                 'username' => 'required|max:50|min:4',
@@ -72,6 +73,7 @@ class UserController extends Controller
                     $User = new User;
                     $User->name = $request->username;
                     $User->password = bcrypt($request->password);
+                    $User->guid = $uuid;
                     Session(['USER_PWD'=>$request->password]);
                     $User->email = $email;
                     $User->save();
