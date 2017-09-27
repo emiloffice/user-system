@@ -50,7 +50,7 @@ div#form-ambassador button[type="submit"]{
 .ambassador-banner{
   position: relative;
   height: 11rem !important;
-  background: url(/img/am_banner_bg.png) center no-repeat;
+  background: url("https://cdn.multiverseinc.com/img/am_banner_bg.png") center no-repeat;
   background-color: #000000;
   background-size: cover;
 }
@@ -204,6 +204,10 @@ ul.loot-content-list>li>p:last-of-type {
   background: $theme-bg-black;
   height: 1rem;
   line-height: 1rem;
+  position: fixed;
+  width: 100%;
+  display: block;
+  z-index: 10;
   .logo{
     float: left;
   }

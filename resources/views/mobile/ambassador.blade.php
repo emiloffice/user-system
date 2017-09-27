@@ -61,12 +61,12 @@
         <div class="m-panel">
             <div class="title">REWARDS</div>
             <ul class="loot-list">
-                <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/images/Backpack.png" alt="backpacj"></li>
-                <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/images/Hat.png" alt="hat"></li>
-                <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/images/Signed Poster.png" alt="Signed Poster"></li>
-                <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/images/Standard Copy of “Seeking Dawn”.png" alt="loot"></li>
-                <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/images/T-Shirt.png" alt="T-Shirt"></li>
-                <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/images/Thank you letter .png" alt="Thank you letter "></li>
+                <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><img src="https://cdn.multiverseinc.com/images/Backpack.png" alt="backpacj"></li>
+                <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><img src="https://cdn.multiverseinc.com/images/Hat.png" alt="hat"></li>
+                <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><img src="https://cdn.multiverseinc.com/images/Signed Poster.png" alt="Signed Poster"></li>
+                <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><img src="https://cdn.multiverseinc.com/images/Standard Copy of “Seeking Dawn”.png" alt="loot"></li>
+                <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><img src="https://cdn.multiverseinc.com/images/T-Shirt.png" alt="T-Shirt"></li>
+                <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><img src="https://cdn.multiverseinc.com/images/Thank you letter .png" alt="Thank you letter "></li>
             </ul>
             <div class="clearfix"></div>
             <ul class="loot-content-list">

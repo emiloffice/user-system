@@ -69,7 +69,7 @@
             <div class="title"><span>REWARDS</span></div>
             <div class="text-center" style="margin-top: 50px;">
                 <img src="//{{getenv('RESOURCE_PATH')}}/images/loot_logo.png" alt="" class="loot-logo" style="width: 90%;">
-                <img src="//{{getenv('RESOURCE_PATH')}}/images/loot.png" alt="" class="loot" style="width: 90%;margin-top: 45px;">
+                <img src="//cdn.multiverseinc.com/images/loot.png" alt="" class="loot" style="width: 90%;margin-top: 45px;">
             </div>
             {{--<ul class="loot-list">
                 <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/images/Backpack.png" alt="backpacj"></li>
