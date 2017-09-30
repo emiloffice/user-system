@@ -58,7 +58,7 @@
 
 <div class="ambassador-loot">
     <div class="container">
-        <div class="m-panel">
+        <div class="m-panel" style="text-align: center">
             <div class="title">REWARDS</div>
             <img src="//{{getenv('RESOURCE_PATH')}}/images/loot_logo.png" alt="" class="loot-logo" style="width: 90%;">
             <img src="//cdn.multiverseinc.com/images/loot.png" alt="" class="loot" style="width: 90%;margin-top: 45px;">
