@@ -30,7 +30,7 @@
 </div>
 <div class="banner ambassador-banner">
     @if($user == null || !isset($user))
-        <div class="join-btn btn-area" onclick="join()">Join the community groups</div>
+        <div class="join-btn btn-area" onclick="join()">Join our community!</div>
         @else
         <div class="join-btn btn-area"><a href="https://www.facebook.com/groups/seekingdawnna/" target="_blank">Join the community groups</a></div>
     @endif
@@ -60,50 +60,8 @@
     <div class="container">
         <div class="m-panel">
             <div class="title">REWARDS</div>
-            <ul class="loot-list">
-                <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><img src="https://cdn.multiverseinc.com/images/Backpack.png" alt="backpacj"></li>
-                <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><img src="https://cdn.multiverseinc.com/images/Hat.png" alt="hat"></li>
-                <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><img src="https://cdn.multiverseinc.com/images/Signed Poster.png" alt="Signed Poster"></li>
-                <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><img src="https://cdn.multiverseinc.com/images/Standard Copy of “Seeking Dawn”.png" alt="loot"></li>
-                <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><img src="https://cdn.multiverseinc.com/images/T-Shirt.png" alt="T-Shirt"></li>
-                <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><img src="https://cdn.multiverseinc.com/images/Thank you letter .png" alt="Thank you letter "></li>
-            </ul>
-            <div class="clearfix"></div>
-            <ul class="loot-content-list">
-                <li class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <p>10 Referrals (100 Points） = Tier 1</p>
-                    <p>Thank you letter + “Seeking Dawn” Key-chain</p>
-                </li>
-                <li class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <p>20 Referrals (200 Points）  = Tier 2</p>
-                    <p>Tier 1 Prizes + 11x17 Signed Poster by developer or Freeman</p>
-                </li>
-                <li class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <p>30 Referrals  (300 Points） = Tier 3</p>
-                    <p> Tier 1 + Tier 2 Prizes + “Seeking Dawn” T-Shirt</p>
-                </li>
-                <li class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <p>40 Referrals (400 Points） = Tier 4 </p>
-                    <p>Tier 1 + Tier 2 Prizes +“Seeking Dawn” Backpack</p>
-                </li>
-                <li class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <p>50 Referrals  (500 Points）  = Tier 5</p>
-                    <p>Tier 1 + Tier 2 + T-Shirt + Backpack + Hat</p>
-                </li>
-                <li class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <p>70 Referrals (700 Points）  = Tier 6 </p>
-                    <p>In-Game item named after them + Standard Copy of “Seeking Dawn”</p>
-                </li>
-                <li class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <p>80 Referrals (800 Points）  = Tier 7 </p>
-                    <p>Tier 6 + In-game cosmetic + Signed Poster + Backpack + T-Shirt]</p>
-                </li>
-                <li class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <p>100 Referrals (1000 Points）  = Tier 8 (Ultimate Prize)</p>
-                    <p>Tier 7 + signed Hat + Early Access / head-start + Character named
-                        after you in-game + Meet & Greet with Staff/Dev Team</p>
-                </li>
-            </ul>
+            <img src="//{{getenv('RESOURCE_PATH')}}/images/loot_logo.png" alt="" class="loot-logo" style="width: 90%;">
+            <img src="//cdn.multiverseinc.com/images/loot.png" alt="" class="loot" style="width: 90%;margin-top: 45px;">
             <div class="clearfix"></div>
         </div>
     </div>
