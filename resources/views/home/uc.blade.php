@@ -33,7 +33,7 @@
                 <div class="main-table">
                     <div class="left">
                         {{--<div class=""></div>--}}
-                        <div class=""><a href="https://www.facebook.com/groups/seekingdawnna/" target="_blank">Join our ambassador program</a></div>
+                        <div class=""><a href="https://www.facebook.com/groups/seekingdawnna/" target="_blank">Join our community!</a></div>
                         <div class="">
                             <p class="title" style="padding-top: 10px">Quests</p>
                             <p>1. Gain 10 points for referring your first friend</p>

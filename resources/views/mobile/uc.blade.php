@@ -45,7 +45,7 @@
                 </ul>
                 <p class="title">Welcome home, track your progress here!</p>
                 <div class="main-table">
-                    <div class=""><a href="https://www.facebook.com/groups/seekingdawnna/" target="_blank">Join the community groups</a></div>
+                    <div class=""><a href="https://www.facebook.com/groups/seekingdawnna/" target="_blank">Join our community!</a></div>
                     <div class="">
                         <p class="title">Quests</p>
                         <p>1. Gain 10 points for referring your first friend</p>
