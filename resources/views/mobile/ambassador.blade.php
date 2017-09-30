@@ -109,12 +109,12 @@
         layer.confirm('Login to your existing Multiverse account or sign up today!', {
             btn: ['Log in','Sign up'], title: 'Message'
         }, function(){
-            window.location.href = "{{ url('login', '', true) }}";
+            window.location.href = "{{ url('login', '', env('HTTPS_REQUEST')) }}";
         }, function(){
             @if(isset($code))
-                window.location.href = "{{ url('register', '' , true) }}?code={{$code}}";
+                window.location.href = "{{ url('register', '' , env('HTTPS_REQUEST')) }}?code={{$code}}";
             @else
-                window.location.href = "{{ url('register', '' , true) }}";
+                window.location.href = "{{ url('register', '' , env('HTTPS_REQUEST')) }}";
             @endif
         });
     }
