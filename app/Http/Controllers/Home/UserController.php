@@ -202,6 +202,7 @@ class UserController extends Controller
         $HTTPS_REQUEST = env('HTTPS_REQUEST');
         $token = $user->token;
         $email = $user->email;
+        $id = $user->id;
         $res = DB::table('users')->where('oauth_token', $token)->orWhere('email', $email)->first();
 
         if ($res){
@@ -246,10 +247,14 @@ class UserController extends Controller
             if ($code === $request->code){
                 $user = session('OAUTH_INFO');
                 $email = $user->email = $request->email;
-                $this->createUser($user,'twitter');
-                Point::where('referral_code',$request->referral_code)->increment('points', 10);
-                Auth::attempt(['email' => $email, 'password' => '123456']);
-                return redirect('user-center');
+                $user = session('OAUTH_INFO');
+                $res = DB::table('users')->where('id',$user->id)->update(['email'=>$email]);
+                if ($res){
+                    Auth::attempt(['email' => $email, 'password' => '123456']);
+                    return redirect('user-center');
+                }else{
+                    return Redirect::back()->withInput()->with('codeError','The Verification code you entered is incorrect ！');
+                }
             }else{
                 return Redirect::back()->withInput()->with('codeError','The Verification code you entered is incorrect ！');
 

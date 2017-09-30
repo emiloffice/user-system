@@ -97,7 +97,7 @@ class TwitterController extends Controller
                         Auth::attempt(['email'=>$user->email, 'password'=>'123456']);
                         return redirect('user-center');
                     }else{
-                        session(['OAUTH_INFO'=>$user]);
+                        session(['OAUTH_INFO'=>$u]);
                         return redirect('oauth-confirm-email');
                     }
                 }
