@@ -25,7 +25,7 @@
                 @if(isset($code))
                     <a href="{{url('register', '', false)}}?code={{$code}}" class="logout">Join our ambassador program</a>
                 @else
-                    <a href="{{url('register', '', false)}}" class="logout">Join our ambassador program</a>
+                    <a href="{{url('register', '', false)}}" class="logout">Join the Ambassador Program</a>
                 @endif
                 <a href="{{url('login', '', false)}}" class="logout">Log in</a>
             @else

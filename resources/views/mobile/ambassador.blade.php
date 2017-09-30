@@ -30,7 +30,7 @@
 </div>
 <div class="banner ambassador-banner">
     @if($user == null || !isset($user))
-        <div class="join-btn btn-area" onclick="join()">Join our community!</div>
+        <div class="join-btn btn-area" onclick="join()">Join the Ambassador Program!</div>
         @else
         <div class="join-btn btn-area"><a href="https://www.facebook.com/groups/seekingdawnna/" target="_blank">Join the community groups</a></div>
     @endif
