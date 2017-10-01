@@ -131,4 +131,24 @@ class AmbassadorController extends Controller
         else
             return false;
     }
+    public function ambassadorCode($code)
+    {
+        $HTTPS_REQUEST = env('HTTPS_REQUEST');
+        if ($code){
+            session(['FROM_REFERRAL_CODE'=>$code]);
+            $user = Auth::user();
+            if ($user === ''){
+                $user = null;
+            }
+            $points = Point::where([])->orderBy('points','desc')->take(10)
+                ->join('users', 'points.user_id', '=', 'users.id')
+                ->get();
+            $point = Point::where('referral_code', $code)->first();
+        }
+        if ($this->is_mobile_request()){
+            return view('mobile.ambassador', compact('points','user','code','HTTPS_REQUEST'));
+        } else{
+            return view('home.ambassador', compact('points','user','code','HTTPS_REQUEST'));
+        }
+    }
 }
