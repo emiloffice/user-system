@@ -39,7 +39,7 @@ Route::group([
     'namespace'=>'Home'
 ], function ($router) {
     $router::get('/ambassador','AmbassadorController@index');
-    $router->any('/ambassador/{code}', 'ambassadorController@ambassadorCode');
+    $router->any('/ambassador/{code}', 'AmbassadorController@ambassadorCode');
     $router::get('/uc','AmbassadorController@center');
     $router::get('/user-center','AmbassadorController@center');
     $router::get('/login','UserController@login');
