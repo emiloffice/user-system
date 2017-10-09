@@ -80,6 +80,7 @@ class UserController extends Controller
                     session(['USER_INFO'=>$User]);
                     $Point = new Point;
                     $Point->user_id = $User->id;
+                    $Point->guid = $User->guid;
                     $from_referral_id = Point::where('referral_code', $request->referral_code)->value('user_id');
                     $Point->from_referral_code = $request->referral_code;//提交的推荐码
                     $Point->from_referral_id = $from_referral_id;//提交的推荐人ID
