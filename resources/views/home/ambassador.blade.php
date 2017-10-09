@@ -19,7 +19,7 @@
 </head>
 <div class="header">
     <div class="container">
-        <div class="logo"><a href="{{url('ambassador','',false)}}"><img src="//{{getenv('RESOURCE_PATH')}}/img/logo.png" alt="logo"></a></div>
+        <div class="logo"><a href="http://www.seekingdawnvr.com"><img src="//{{getenv('RESOURCE_PATH')}}/img/logo.png" alt="logo"></a></div>
         <div class="right">
             @if($user == null || !isset($user))
                 @if(isset($code))
