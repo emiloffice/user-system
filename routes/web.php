@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home.ambassador');
-});
+
 
 Auth::routes();
 
@@ -38,6 +36,7 @@ Route::group([
     'prefix'=>'',
     'namespace'=>'Home'
 ], function ($router) {
+    $router::get('/','AmbassadorController@index');
     $router::get('/ambassador','AmbassadorController@index');
     $router->any('/ambassador/{code}', 'AmbassadorController@ambassadorCode');
     $router::get('/uc','AmbassadorController@center');
