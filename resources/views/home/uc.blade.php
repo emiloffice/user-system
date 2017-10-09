@@ -75,7 +75,7 @@
                             @endif
                             <p class="name">{{ $user->name }}</p>
                             <div class="am_level">
-                                <p class="level">Tier {{ $point->level }}</p>
+                                <p class="level">LV {{ $point->level }}</p>
                                 <div class="progress">
                                     <div class="progress-bar" role="progressbar" aria-valuenow="{{ $point->progress }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ $point->progress }}%">
                                     </div>

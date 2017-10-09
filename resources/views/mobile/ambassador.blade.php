@@ -47,7 +47,7 @@
 
             @foreach($points as $p)
                 <div class="col-md-12 col-lg-12 rank-table-body">
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 rank"><span class="iconfont icon-zuanshi"></span> Tier {{ $p->points_level }}</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 rank"><span class="iconfont icon-zuanshi"></span> LV {{ $p->points_level }}</div>
                     <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">{{ $p->name }}</div>
                     <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">{{ $p->points }}</div>
                 </div>

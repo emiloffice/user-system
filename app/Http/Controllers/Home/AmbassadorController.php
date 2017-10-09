@@ -21,6 +21,13 @@ class AmbassadorController extends Controller
         $points = Point::where('status','1')->orderBy('points','desc')->take(10)
             ->join('users', 'points.user_id', '=', 'users.id')
             ->get();
+        $num = count($points);
+        foreach ($points as $key => $value){
+            $value->level = '';
+            $res = $this->ambassador_level($value->points);
+            $value->points_level = $res['level'];
+
+        }
         if($this->is_mobile_request()){
             return view('mobile.ambassador', compact('points','user','HTTPS_REQUEST'));
         }else{
